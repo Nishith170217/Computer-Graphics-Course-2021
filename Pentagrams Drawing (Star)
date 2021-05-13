@@ -36,43 +36,33 @@ void myDisplay(void)
     // Please add your code here
     /********** Begin ********/
     glClearColor(0.0,0.0,0.0,0.0);
-    glColor3f(1.0f,0.0f,0.0f); //blue color
+    glColor3f(1.0f,0.0f,0.0f);
     glBegin(GL_LINE_LOOP);//begin drawing of polygon
-      glVertex2f(A.x,A.y);//first vertex
-      glVertex2f(B.x,B.y);//second vertex
-      glVertex2f(C.x,C.y);//third vertex
-      glVertex2f(D.x,D.y);//fourth vertex
-      glVertex2f(E.x,E.y);//fifth vertex
-      //glVertex2f(A1.x,A1.y);//first vertex
-   
-      //glVertex2f(F.x,F.y);//sixth vertex
+      glVertex2f(A.x,A.y);
+      glVertex2f(B.x,B.y);
+      glVertex2f(C.x,C.y);
+      glVertex2f(D.x,D.y);
+      glVertex2f(E.x,E.y);
+
 
     glEnd();//end drawing of polygon
-    glColor3f(0.0f,1.0f,1.0f); //blue color
+    
+    glColor3f(0.0f,1.0f,1.0f);
     
     glBegin(GL_POLYGON);//begin drawing of polygon
-      //glVertex2f(A1.x,A1.y);//first vertex
-      //glVertex2f(B1.x,B1.y);//second vertex
-      //glVertex2f(C1.x,C1.y);//third vertex
-      //glVertex2f(D1.x,D1.y);//fourth vertex
-      //glVertex2f(E1.x,E1.y);//fifth vertex
-      //glVertex2f(F.x,F.y);//sixth vertex
-      glVertex2f(A1.x,A1.y);//first vertex
-      glVertex2f(E1.x,E1.y);//fifth vertex
-      glVertex2f(F.x,F.y);//sixth vertex
-      glVertex2f(B1.x,B1.y);//second vertex
+
+      glVertex2f(A1.x,A1.y);
+      glVertex2f(E1.x,E1.y);
+      glVertex2f(F.x,F.y);
+      glVertex2f(B1.x,B1.y);
 
     glEnd();//end drawing of polygon
-        glBegin(GL_POLYGON);//begin drawing of polygon
-      //glVertex2f(A1.x,A1.y);//first vertex
-      //glVertex2f(B1.x,B1.y);//second vertex
-      //glVertex2f(C1.x,C1.y);//third vertex
-       glVertex2f(D1.x,D1.y);//fourth vertex
-      //glVertex2f(E1.x,E1.y);//fifth vertex
-      //glVertex2f(F.x,F.y);//sixth vertex
-       glVertex2f(C1.x,C1.y);//third vertex
+    
+    glBegin(GL_POLYGON);//begin drawing of polygon
+       glVertex2f(D1.x,D1.y);
+       glVertex2f(C1.x,C1.y);
  
-       glVertex2f(F.x,F.y);//sixth vertex
+       glVertex2f(F.x,F.y);
       
 
     glEnd();//end drawing of polygon

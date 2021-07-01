@@ -11,7 +11,7 @@ GLint winWidth = 400, winHeight = 400; 	      //Sets the initialization window s
 
 /*Observe the coordinate system parameter Settings*/
 GLfloat x0 = 4 ,yy = 2, z0 = 8;	   
-GLfloat xref = 0.0, yref = -1.0, zref = 0.0;	
+GLfloat xref = 0.0, yref = 0.0, zref = 0.0;	
 GLfloat Vx = 0.0, Vy = 5.0, Vz = 0.0;	   
 
 
@@ -28,103 +28,27 @@ void display(void)
     gluLookAt(x0, yy, z0, xref, yref, zref, Vx, Vy, Vz);       
     // Please add your code here
     /********** Begin ********/
-     /***Draw the orange cube below***/
-    // glPushMatrix();
-    // glColor3f(1.5,0.5,0);
-    // glTranslatef(0.0f,-0.3f,0.0f);
-    // glScalef(5.0,0.4,5.0);
-    // glutSolidCube(1.0);
-    // glColor3f(0.0,0.0,0.0);
-    // glutWireCube(1.0);
-    // glPopMatrix();
-        
-    // glPushMatrix();
-    // glRotatef(45,0,1,0);
-    // glColor3f(0.0,1.0,1.0);
-    // glScalef(1.0,0.2,1.0);
-    // glutSolidCube(1.0);
-    // glColor3f(0.0,0.0,0.0);
-    // glutWireCube(1.0);
-    // glPopMatrix();
-    /***Please draw a blue floor***/
-    glPushMatrix();
-    glColor3f(0.0, 1.0, 1.0);
-    glBegin(GL_POLYGON);
-    glVertex3f(-3.0, -3.5, -3.0);
-    glVertex3f(3.0, -3.5, -3.0);
-    glVertex3f(3.0, -3.5, 3.0);
-    glVertex3f(-3.0, -3.5, 3.0);
-    glEnd();
-    glPopMatrix();
-
-    //Four Legs,
     
+    /***Draw the orange cube below***/
     glPushMatrix();
-    glColor3f(1.0, 1.0, 0.0);
-    glTranslatef(2.0, -2.0, 2.0);
-    glScalef(1.0, 15.0, 1.0);;
-    glutSolidCube(0.2);
-    glColor3f(0.0, 0.0, 0.0);
-    glutWireCube(0.2);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0, 1.0, 0.0);
-    glTranslatef(2.0, -2.0, -2.0);
-    glScalef(1.0, 15.0, 1.0);
-    glutSolidCube(0.2);
-    glColor3f(0.0, 0.0, 0.0);
-    glutWireCube(0.2);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0, 1.0, 0.0);
-    glTranslatef(-2.0, -2.0, 2.0);
-    glScalef(1.0, 15.0, 1.0);
-    glutSolidCube(0.2);
-    glColor3f(0.0, 0.0, 0.0);
-    glutWireCube(0.2);
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1.0, 1.0, 0.0);
-    glTranslatef(-2.0, -2.0, -2.0);
-    glScalef(1.0, 15.0, 1.0);
-    glutSolidCube(0.2);
-    glColor3f(0.0, 0.0, 0.0);
-    glutWireCube(0.2);
-    glPopMatrix();
-    
-
-
-
-
-
-    /***************************************/
-    /***Please draw the orange desktop***/
-    glPushMatrix();
-    glColor3f(1.5, 0.5, 0.0);
-    glTranslatef(0.0, -0.3, 0.0);
-    glScalef(5.0, 0.4, 5.0);
+    glColor3f(1.5,0.5,0);
+    glTranslatef(0.0f,-0.7f,0.0f);
+    glScalef(5.0,0.4,5.0);
     glutSolidCube(1.0);
-    glColor3f(0.0, 0.0, 0.0);
-    glutWireCube(1.0);
-    glPopMatrix();
-
-    /***************************************/
-    /***Please draw a blue book ***/
-    glPushMatrix();
-    glColor3f(0.0, 1.0, 1.0);
-    glRotatef(45.0, 0.0, 1.0, 0.0);
-    glScalef(1.0, 0.2, 1.0);
-    glutSolidCube(1.0);
-    glColor3f(0.0, 0.0, 0.0);
+    glColor3f(0.0,0.0,0.0);
     glutWireCube(1.0);
     glPopMatrix();
 
 
+    /***************************************/
+    /***Please draws a blue unit cube entity***/
 
-
+    glPushMatrix();
+    glColor3f(0.0,1.0,1.0);
+    glutSolidCube(1.0);
+    glColor3f(0.0,0.0,0.0);
+    glutWireCube(1.0);
+    glPopMatrix();
 
     /***************************************/
     /********** End **********/
@@ -194,6 +118,6 @@ int main(int argc, char* argv[])
     cv::namedWindow("openglGrab");
     cv::imshow("openglGrab", img);
     //cv::waitKey();
-    cv::imwrite("../img_step3/test.jpg", img);
+    cv::imwrite("../img_step1/test.jpg", img);
     return 0;
 }
